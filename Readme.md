@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Oleg Shpak](https://up.htmlacademy.ru/htmlcss/33/user/2011747).
-* Наставник: `Неизвестно`.
+* Наставник: Arthur Litovko.
 
 ---
 
