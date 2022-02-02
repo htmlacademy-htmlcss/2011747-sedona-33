@@ -40,7 +40,7 @@
       <header class="main-inner">
         <h1 class="main-inner-title">Гостиницы Седоны</h1>
         <nav class="navigation-inner">
-          <ul class="navigation-list">
+          <ol class="navigation-list">
             <li class="navigation-item">
               <a class="navigation-inner-link" href="index.html">
               <img class="index-logo" alt="На главную" src="">
@@ -49,7 +49,7 @@
             <li class="navigation-item">
               <a class="navigation-inner-link" href="#">Гостиницы</a>
             </li>
-          </ul>
+          </ol>
         </nav>
       </header>
 
@@ -128,10 +128,9 @@
           </fieldset>
         </form>
       </section>
-<!--Не уверен, что нужно выделять результы поиска в отдельную секцию. Показалось, что так будет доступнее-->
+
       <section class="results">
-        <h2 class="results-title">Найдено гостиниц: <span class="results-number">38</span></h2>
-        <!--Насколько я понял, здесь возвращаемое значение. Как размечается этот элемент?-->
+        <h2 class="results-title">Найдено гостиниц: <output name="result">38</output></h2>
         <p class="select-type">
           <select class="select-control" aria-label="Сортировка">
             <option value="cheap">Сначала дешёвые</option>
@@ -153,7 +152,7 @@
 
         <ul class="hotel-list">
           <li class="hotel-card">
-          <img class="hotel-card-image" src="" alt="Фото отеля">
+          <img class="hotel-card-image" src="images/hotels/hotel-amara.jpg" width="300" height="206" alt="Amara Resort & Spa">
           <p class="hotel-card-info">
             <h3 class="hotel-card-title">Amara Resort & Spa</h3>
             <span class="hotel-card-type">Гостиница</span>
@@ -170,7 +169,7 @@
           </li>
 
           <li class="hotel-card">
-          <img class="hotel-card-image" src="" alt="Фото отеля">
+          <img class="hotel-card-image" src="images/hotels/hotel-desert.jpg" width="300" height="206" alt="Desert Quail Inn">
           <p class="hotel-card-info">
             <h3 class="hotel-card-title">Desert Quail Inn</h3>
             <span class="hotel-card-type">Гостиница</span>
@@ -187,7 +186,7 @@
           </li>
 
           <li class="hotel-card">
-          <img class="hotel-card-image" src="" alt="Фото отеля">
+          <img class="hotel-card-image" src="images/hotels/hotel-villas.jpg" width="300" height="206" alt="Villas at Poco Diablo">
           <p class="hotel-card-info">
             <h3 class="hotel-card-title">Villas at Poco Diablo</h3>
             <span class="hotel-card-type">Гостиница</span>
@@ -204,7 +203,7 @@
           </li>
 
           <li class="hotel-card">
-          <img class="hotel-card-image" src="" alt="Фото отеля">
+          <img class="hotel-card-image" src="images/hotels/hotel-green_tree.jpg" width="300" height="206" alt="GreenTree Inn">
           <p class="hotel-card-info">
             <h3 class="hotel-card-title">GreenTree Inn</h3>
             <span class="hotel-card-type">Гостиница</span>
@@ -236,19 +235,7 @@
             <a class="pagination-link" href="#">4</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link" href="#">5</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">6</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">7</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">8</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">9</a>
+            <button class="pagination-link" type="button" aria-label="Больше вариантов">…</button >
           </li>
           <li class="pagination-item">
             <a class="pagination-link" href="#">10</a>
@@ -312,7 +299,7 @@
       <section class="developer">
         <h2 class="visually-hidden">Разработка сайта:</h2>
         <a class="developer-link" href="https://htmlacademy.ru/">
-          <img class="developer-logo" alt="htmlacademy" src="">
+          <span class="visually-hidden">HTMLAcademy</span>
         </a>
       </section>
     </footer>
