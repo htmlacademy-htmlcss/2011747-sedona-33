@@ -20,7 +20,7 @@
             <a class="navigation-link">Гостиницы</a>
           </li>
         </ul>
-        <ul class="navigation-user">
+        <ul class="navigation-list navigation-user">
           <li class="navigation-item">
             <a class="navigation-link" href="#">
               <span class="visually-hidden">Поиск</span>
@@ -44,12 +44,12 @@
           <h1 class="main-inner-title">Гостиницы Седоны</h1>
           <nav class="breadscrumbs">
             <ol class="breadscrumbs-navigation-list">
-              <li class="navigation-item">
+              <li class="breadscrumbs-navigation-item">
                 <a class="navigation-inner-link" href="index.html">
                 <img class="index-logo" alt="На главную" src="">
                 </a>
               </li>
-              <li class="navigation-item">
+              <li class="breadscrumbs-navigation-item">
                 <a class="navigation-inner-link" href="#">Гостиницы</a>
               </li>
             </ol>
@@ -146,13 +146,13 @@
           </p>
           <p class="view">
             <a class="button button-view" href="#">
-              <img class="view-icon" src="" alt="Вид: Карточки">
+              <span class="visually-hidden">Показать карточки</span>
             </a>
             <a href="#" class="button button-view">
-              <img class="view-icon" src="" alt="Вид: Слайдшоу">
+              <span class="visually-hidden">Показать слайдшоу</span>
             </a>
             <a href="#" class="button button-view">
-              <img class="view-icon" src="" alt="Вид: Список">
+              <span class="visually-hidden">Показать список</span>
             </a>
           </p>
         </div>
@@ -275,8 +275,9 @@
       <section class="newsletter-catalog">
         <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
         <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
-        <form action="https://echo.htmlacademy.ru/" method="post">
-          <label class="visually-hidden">Введите свой e-mail:<input class="usermail" type="email" name="usermail" placeholder="Ваш e-mail" required></label>
+        <form class="input-container" action="https://echo.htmlacademy.ru/" method="post">
+          <label class="visually-hidden" for="usermail-id">Введите свой e-mail:</label>
+          <input class="usermail" id="usermail-id" type="email" name="usermail" placeholder="Ваш e-mail" required>
           <button class="button button-blue" type="button">Подписаться</button>
         </form>
       </section>
