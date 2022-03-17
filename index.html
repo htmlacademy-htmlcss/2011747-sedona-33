@@ -120,7 +120,7 @@
         <section class="newsletter">
           <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
           <p class="newsletter-text">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
-          <form class="input-container" action="https://echo.htmlacademy.ru/" method="post">
+          <form class="input-container error-view" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="usermail-id">Введите свой e-mail:</label>
             <input class="usermail" id="usermail-id" type="email" name="usermail" placeholder="Ваш e-mail" required>
             <button class="button button-blue button-subscribe" type="button">Подписаться</button>
@@ -173,5 +173,51 @@
         </section>
 
     </footer>
+
+    <div class="modal-container">
+      <div class="modal modal-auth">
+        <button class="modal-close-button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+
+          <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="select-group">
+              <p class="select-title">Дата заезда:</p>
+              <div class="select date-type">
+                <input class="select-date" type="date" name="trip-start" value="Укажите дату" min="" max="">
+              </div>
+            </div>
+
+            <div class="select-group">
+              <p class="select-title">Дата выезда:</p>
+              <div class="select date-type">
+                <input class="select-date" type="date" name="trip-end" value="Укажите дату" min="" max="">
+              </div>
+            </div>
+
+            <div class="guests-group">
+
+              <div class="select-group">
+                <p class="select-title">Взрослые:</p>
+                <input class="guests" type="number" value="2" min="0" max="10">
+              </div>
+
+              <div class="select-group">
+                <p class="select-title">Дети:</p>
+                <input class="guests" type="number" value="1" min="0" max=10">
+              </div>
+
+            </div>
+
+            <button class="button button-blue modal-button" type="submit">Найти</button>
+          </form>
+
+        </section>
+      </div>
+
+    </div>
+
   </body>
 </html>
