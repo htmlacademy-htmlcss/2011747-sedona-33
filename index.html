@@ -120,9 +120,10 @@
         <section class="newsletter">
           <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
           <p class="newsletter-text">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
-          <form class="input-container error-view" action="https://echo.htmlacademy.ru/" method="post">
+          <form class="input-container" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="usermail-id">Введите свой e-mail:</label>
-            <input class="usermail" id="usermail-id" type="email" name="usermail" placeholder="Ваш e-mail" required>
+            <!-- Класс usermail-error задан для состояния "Ошибка". Стиль для класса закомментирован.-->
+            <input class="usermail usermail-error" id="usermail-id" type="email" name="usermail" placeholder="Ваш e-mail" required>
             <button class="button button-blue button-subscribe" type="button">Подписаться</button>
           </form>
         </section>
@@ -174,7 +175,7 @@
 
     </footer>
 
-    <div class="modal-container">
+    <div class="modal-container modal-container-close">
       <div class="modal modal-auth">
         <button class="modal-close-button">
           <span class="visually-hidden">Закрыть</span>
@@ -183,30 +184,44 @@
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
 
           <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
-            <div class="select-group">
-              <p class="select-title">Дата заезда:</p>
-              <div class="select date-type">
-                <input class="select-date" type="date" name="trip-start" value="Укажите дату" min="" max="">
-              </div>
+            <div class="modal-input-group">
+              <label class="modal-input-title" for="start">Дата заезда:</label>
+              <input class="modal-input-date" type="text" id="start" name="trip-start" value="27 апреля 2020">
+              <span class="modal-input-false">Мы не можем отправить вас в прошлое.</span>
+              <span class="modal-input-true visually-hidden">На эти даты есть свободные номера. Пока есть.</span>
             </div>
 
-            <div class="select-group">
-              <p class="select-title">Дата выезда:</p>
-              <div class="select date-type">
-                <input class="select-date" type="date" name="trip-end" value="Укажите дату" min="" max="">
-              </div>
+            <div class="modal-input-group">
+              <label class="modal-input-title" for="end">Дата выезда:</label>
+              <input class="modal-input-date" type="text" id="end" name="trip-end" value="1 сентября 2021">
+              <span class="modal-input-false visually-hidden">Мы не можем отправить вас в прошлое.</span>
+              <span class="modal-input-true">На эти даты есть свободные номера. Пока есть.</span>
             </div>
 
             <div class="guests-group">
 
-              <div class="select-group">
-                <p class="select-title">Взрослые:</p>
-                <input class="guests" type="number" value="2" min="0" max="10">
+              <div class="modal-input-group">
+                <label class="modal-input-title" for="adults">Взрослые:</label>
+                <div class="custom-number">
+                  <button type="button" class="custom-number-action"></button>
+                  <input class="modal-input-guests" type="number" id="adults" value="2" min="0" max="10">
+                  <button type="button" class="custom-number-action customs-number-action_right"></button>
+                </div>
               </div>
 
-              <div class="select-group">
-                <p class="select-title">Дети:</p>
-                <input class="guests" type="number" value="1" min="0" max=10">
+              <div class="modal-input-group">
+                <span class="modal-input-title">
+                  <label class="modal-input-title" for="children">Дети:</label>
+                  <span class="tooltip">
+                    <button type="button" class="tooltip-button" aria-labelledby="tooltip-label"></button>
+                    <span class="tooltip-text" role="tooltip" id="tooltip-label">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                  </span>
+                </span>
+                <div class="custom-number">
+                  <button type="button" class="custom-number-action"></button>
+                  <input class="modal-input-guests" type="number" id="children" value="1" min="0" max=10">
+                  <button type="button" class="custom-number-action customs-number-action_right"></button>
+                </div>
               </div>
 
             </div>
