@@ -158,18 +158,18 @@
       <section class="results">
         <div class="select-container">
           <h2 class="results-title">Найдено гостиниц: <output name="result">38</output></h2>
-          <p class="select-type">
+          <div class="select sorting-type">
             <select class="select-control" aria-label="Сортировка">
               <option value="cheap">Сначала дешёвые</option>
               <option value="expensive">Сначала дорогие</option>
               <option value="popular">Сначала популярное</option>
             </select>
-          </p>
-          <p class="view">
+          </div>
+          <div class="view">
             <a class="button-view current-view cards" href="#"></a>
             <a href="#" class="button-view slideshow"></a>
             <a href="#" class="button-view list"></a>
-          </p>
+          </div>
         </div>
 
         <div class="card-container">
@@ -308,17 +308,19 @@
           </ul>
 
           <p class="select-number-title">Гостиниц на странице:</p>
-          <select class="select-control" name="numbers">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4" selected>4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-          </select>
+          <div class="select page-type">
+            <select class="select-control" name="numbers">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4" selected>4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+            </select>
+          </div>
 
         </div>
       </section>
