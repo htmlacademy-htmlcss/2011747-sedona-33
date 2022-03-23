@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="stylesheet" href="styles/style.css">
   </head>
   <body>
@@ -34,7 +35,7 @@
             </a>
           </li>
           <li class="navigation-item navigation-choice">
-            <button class="button" type="button">Хочу сюда!</button>
+            <button class="button" type="button" aria-label="Поиск гостиницы">Хочу сюда!</button>
           </li>
         </ul>
       </nav>
@@ -48,7 +49,6 @@
           <h2 class="visually-hidden">Добро пожаловать в Седону!</h2>
           <p class="welcome-banner">
             <img class="welcome-logo" src="images/welcome-text.svg" width="458" height="352" alt="Добро пожаловать в прекрасную Седону! Потому что Гранд-Каньон - отстой!">
-            <svg class="banner-border" aria-hidden="true" focusable="false" width="1200" height="57" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 57V0l250 24V0l350 57L950 0v24l250-24v57H0Z" fill="#fff"/></svg>
           </p>
         </section>
 
@@ -203,9 +203,9 @@
               <div class="modal-input-group">
                 <label class="modal-input-title" for="adults">Взрослые:</label>
                 <div class="custom-number">
-                  <button type="button" class="custom-number-action"></button>
+                  <button type="button" class="custom-number-action" aria-label="Меньше"></button>
                   <input class="modal-input-guests" type="number" id="adults" value="2" min="0" max="10">
-                  <button type="button" class="custom-number-action customs-number-action_right"></button>
+                  <button type="button" class="custom-number-action customs-number-action_right" aria-label="Больше"></button>
                 </div>
               </div>
 
@@ -218,9 +218,9 @@
                   </span>
                 </span>
                 <div class="custom-number">
-                  <button type="button" class="custom-number-action"></button>
+                  <button type="button" class="custom-number-action" aria-label="Меньше"></button>
                   <input class="modal-input-guests" type="number" id="children" value="1" min="0" max=10">
-                  <button type="button" class="custom-number-action customs-number-action_right"></button>
+                  <button type="button" class="custom-number-action customs-number-action_right" aria-label="Больше"></button>
                 </div>
               </div>
 
