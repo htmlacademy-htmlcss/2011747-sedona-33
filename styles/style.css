@@ -776,6 +776,11 @@ body {
   color: rgba(255, 255, 255, 0.3);
   position: relative;
 }
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .cost-label {
   display: grid;
   grid-template-columns: 1fr auto;
