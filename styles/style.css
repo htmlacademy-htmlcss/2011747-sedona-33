@@ -20,10 +20,6 @@
   box-sizing: border-box;
 }
 
-:focus {
-  outline: 0;
-}
-
 html {
   height: 100%;
 }
@@ -186,7 +182,7 @@ body {
 }
 
 .current-link {
-  border-bottom: 2px solid #756257;
+  border-bottom: inset 2px solid #756257;
 }
 
 .navigation-link:hover {
@@ -292,7 +288,7 @@ body {
 }
 
 .welcome-logo {
-  margin: 51px auto 82px;
+  margin: 50px auto 82px;
   vertical-align: middle;
 }
 
@@ -343,13 +339,17 @@ body {
   display: grid;
   place-items: center;
   place-content: center;
-  padding: 20px;
-  min-width: 250px;
+  padding: 30px 25px 40px;
+  min-width: 220px;
   flex: 1 0 30%;
   min-height: 384px;
   font-size: 18px;
   line-height: 21px;
   background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantage-figcaption {
+  padding: 35px 25px 25px;
 }
 
 .advantage-picture {
@@ -369,7 +369,7 @@ body {
   font-weight: 700;
   line-height: 28px;
   text-transform: uppercase;
-  margin: 30px;
+  margin: 0;
   max-width: 13ch;
 }
 
@@ -378,11 +378,15 @@ body {
   max-width: 24ch;
 }
 
+.advantage-blue-item .advantage-description {
+  max-width: 22ch;
+}
+
 .advantage-item-ordered .advantage-description::before {
   counter-increment: advantage;
   content: "— №" counter(advantage) " —";
   display: block;
-  margin-bottom: 30px;
+  margin: 30px 0;
 }
 
 /* Advice */
@@ -391,8 +395,16 @@ body {
   background-color: #ffffff;
 }
 
+.advice .advantage-item {
+  padding: 35px 25px 35px;
+}
+
 .advice .advantage-title {
   margin: 0 0 20px;
+}
+
+.advice .advantage-description {
+  max-width: 24ch;
 }
 
 .eat-item {
@@ -415,8 +427,8 @@ body {
 }
 
 .searching-text {
-  max-width: 720px;
-  margin: 0 auto 56px;
+  width: 720px;
+  margin: 0 auto 57px;
 }
 
 /* Newsletter */
@@ -447,6 +459,10 @@ body {
   text-transform: uppercase;
 }
 
+.newsletter-catalog .newsletter-title {
+  margin-bottom: 46px;
+}
+
 .newsletter-text {
   margin: 0 auto 46px;
 }
@@ -458,9 +474,12 @@ body {
 }
 
 .usermail {
-  padding: 22px;
+  padding: 18px 20px;
   flex-grow: 1;
   font-family: inherit;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
   background-color: #f2f2f2;
   border-radius: 10px 0 0 10px;
   border: none;
@@ -483,6 +502,9 @@ body {
 
 .button-subscribe {
   width: 200px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
   border-radius: 0 10px 10px 0;
 }
 
@@ -493,7 +515,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 72px;
+  padding: 20px 50px 20px 60px;
   min-height: 120px;
 }
 
@@ -501,7 +523,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 40px);
   grid-auto-rows: 40px;
-  gap: 3px;
+  gap: 5px;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -546,7 +568,7 @@ body {
   font-size: 40px;
   line-height: 40px;
   margin: 0;
-  padding: 15px;
+  padding: 15px 10px 15px 25px;
   border-radius: 10px;
   color: inherit;
   text-decoration: none;
@@ -605,14 +627,19 @@ body {
 /* Filter */
 
 .header-filter {
-  padding: 35px 72px 83px;
+  padding: 35px 72px 82px;
   color: #ffffff;
   background-color: #83b3d3;
-  background-image: url("../images/background_photo/catalog-background 1.jpg");
+  background-image: url("../images/background_photo/catalog-background-1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   margin-bottom: 44px;
+}
+
+.main-inner {
+  position: relative;
+  margin-bottom: 57px;
 }
 
 .main-inner-title {
@@ -623,12 +650,14 @@ body {
 }
 
 .breadscrumbs-navigation-list {
+  position: absolute;
+  top: 67px;
+  left: -7px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
   margin: 0;
-  margin-bottom: 45px;
   padding: 0;
   list-style-type: none;
 }
@@ -723,6 +752,11 @@ body {
   background-position: top 5px left 4px;
 }
 
+.house-type {
+  position: relative;
+  left: -39px;
+}
+
 .control-input[type="radio"] + .control-mark {
   border-radius: 50%;
 }
@@ -743,6 +777,7 @@ body {
   font-weight: 700;
   line-height: 26px;
   margin-bottom: 30px;
+  padding: 0;
 }
 
 .control-label {
@@ -758,11 +793,14 @@ body {
 }
 
 .catalog-filter-item:not(:last-child) {
-  margin-bottom: 13px;
+  margin-bottom: 10px;
 }
 
 .cost {
   width: 287px;
+  position: relative;
+  top: 2px;
+  left: 26px;
 }
 
 .cost-inputs {
@@ -827,6 +865,7 @@ input[type=number] {
 
 .range-scale {
   position: relative;
+  top: -3px;
   height: 4px;
   background-color: rgba(255, 255, 255, 0.3);
 }
@@ -867,15 +906,21 @@ input[type=number] {
 
 .toggle-max {
   top: -8px;
-  right: 0;
+  right: -7px;
 }
 
 .submit {
+  position: relative;
+  top: 10px;
   width: 160px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+}
+
+.button-submit {
+  padding: 15px 35px;
 }
 
 .button-submit:focus {
@@ -884,7 +929,7 @@ input[type=number] {
 
 .button-reset {
   width: 100px;
-  margin-top: 20px;
+  margin: 12px 0 8px;
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
@@ -917,7 +962,7 @@ input[type=number] {
 }
 
 .select-container {
-  margin-bottom: 53px;
+  margin-bottom: 51px;
   padding: 0 72px;
   display: flex;
   justify-content: space-between;
@@ -931,6 +976,7 @@ input[type=number] {
   font-size: 30px;
   font-weight: 700;
   line-height: 39px;
+  text-transform: uppercase;
 }
 
 .select {
@@ -941,6 +987,7 @@ input[type=number] {
 
 .sorting-type {
   width: 287px;
+  left: 22px;
 }
 
 .select-control {
@@ -1025,7 +1072,7 @@ input[type=number] {
   gap: 10px 18px;
   list-style-type: none;
   margin: 0;
-  margin-bottom: 34px;
+  margin-bottom: 33px;
   padding: 0 72px;
   justify-items: stretch;
   align-items: stretch;
@@ -1066,6 +1113,8 @@ input[type=number] {
 }
 
 .hotel-info-block {
+  position: relative;
+  top: 4px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1073,12 +1122,15 @@ input[type=number] {
 }
 
 .hotel-card-price {
-  margin: 0 auto;
+  padding-right: 63px;
 }
 
 .rating-card-text {
   display: block;
   width: 160px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
   text-align: center;
   background-color: #f2f2f2;
   text-transform: uppercase;
@@ -1090,7 +1142,7 @@ input[type=number] {
   border-top: 1px solid #e6e6e6;
   border-bottom: 1px solid #e6e6e6;
   margin: 0 72px;
-  margin-bottom: 30px;
+  margin-bottom: 29px;
   padding: 30px 0;
   text-align: center;
 }
@@ -1130,8 +1182,8 @@ input[type=number] {
 }
 
 .pagination-link {
-  min-width: 55px;
-  min-height: 55px;
+  width: 55px;
+  height: 55px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1157,6 +1209,23 @@ input[type=number] {
   width: 160px;
 }
 
+.page-type .select-control {
+  width: 100%;
+  padding: 10px 15px;
+  padding-right: 60px;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 23px;
+  border-radius: 4px;
+  border: 2px solid #e6e6e6;
+  background-image: url("../images/button_link_icons/arrow_bottom.svg");
+  background-repeat: no-repeat;
+  background-position: right 19px center;
+  appearance: none;
+}
+
+/* Modal */
+
 .modal-container {
   position: fixed;
   top: 0;
@@ -1167,8 +1236,6 @@ input[type=number] {
   background-color: rgba(242, 242, 242, 0.8);
   z-index: 2;
 }
-
-/* Modal */
 
 .modal-container-close {
   display: none;
